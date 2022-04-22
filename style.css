@@ -1,19 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap');
+
 body
 {
 
     margin: 0px;
     background-color: rgb(24, 17, 34);
-
+    font-family: 'Akshar', sans-serif;
 }
 
 footer
 {
 
     position: relative;
-    top: 51px;
-    left: -100.1px;
-    width: 700.1px;
-    padding-top: 16px;
+    margin: auto;
+    top: 52px;
+
+    width: 100.1%;
+    padding-top: 10px;
     height: 40px;
     text-align: center;
     line-height: 10px;
@@ -23,46 +26,45 @@ footer
 
 .main
 {
-
-    margin:auto;
-    width: 500px;
+    position: relative;
+    margin: auto;
+    margin-top: 2%;
+    width: fit-content;
     background-color: rgb(94, 85, 105);
-    padding-left: 100px;
-    padding-right: 100px;
     padding-top: 10px;
     padding-bottom: 51px;
-    margin-top: 3%;
     box-shadow: 0px 3px 10px black;
     user-select: none; /* DESABILITA TODO CLICK FORA DO JS NO SITE*/
     border: 5px solid rgb(30, 27, 34);
-    
 }
 
 #title
 {
 
-    width: 100%;
     text-align: center;
     color: white;
     text-transform: uppercase;
+    margin-left: 50px;
+    margin-right: 50px;
+    position: relative;
 }
 
 #color-palette 
 {
 
-    width: 200px;
+    width: 175px;
     height: 50px;
-    padding-left: 160px;
-    display: inline-block;
+    margin: auto;
+    margin-bottom: 20px;
     position: relative;
-    margin-bottom: 60px;
+    justify-content: space-between;
+    display: flex;
 }
 
 .color
 {
 
     border: 1px solid black;
-    display: inline-block;
     width: 40px;
     height: 40px;
     position: relative;
@@ -96,28 +98,38 @@ footer
     height: 15px;
     font-size: 10px;
     position: relative;
-    left: -138px;
-    top: 35px;
-    box-shadow: 0px 2px 5px black;
+    margin: auto;
+    box-shadow: 0px 2px 5px black;   
+}
+
+#button-div
+{
+
+    margin: auto;
+    position:relative;
+    width: fit-content;
+    margin-bottom: 10px;
 }
 
 #board-size
 {
 
+    position: relative;
+    margin: auto;
     width: 85px;
     height: 12px;
     font-size: 10px;
     box-shadow: 0px 2px 5px black;
     border-radius: 5px;
     border: 2px solid white;
+    margin-bottom: 40px;
 }
 
 #manual-input
 {
 
     width: fit-content;
-    left: 184px;
-    top: -15px;
+    margin: auto;
     position: relative;
 }
 
