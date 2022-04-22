@@ -11,11 +11,10 @@ footer
 
     position: relative;
     top: 75px;
-    left: -102px;
+    left: -100px;
     width: 140%;
     padding-top: 16px;
     height: 40px;
-    border: 2px solid red;
     text-align: center;
     line-height: 2px;
     background-color: rgb(55, 47, 59);
@@ -25,14 +24,15 @@ footer
 .main
 {
 
-    border: 2px solid red;
     margin:auto;
     width: 500px;
     height: 500px;
     background-color: rgb(94, 85, 105);
     padding-left: 100px;
     padding-right: 100px;
-    
+    padding-top: 10px;
+    margin-top: 3%;
+    box-shadow: 0px 3px 10px black;
 }
 
 #title
@@ -42,8 +42,6 @@ footer
     text-align: center;
     color: white;
     text-transform: uppercase;
-
-    box-shadow: inset 2px 2px 10px black;
 }
 
 #color-palette 

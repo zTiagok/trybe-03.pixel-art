@@ -79,6 +79,19 @@ function shadeOutPixel(origin)
   origin.target.style.boxShadow = 'inset 0px 0px 0px black' 
 }
 
+function selectedColor(origin)
+{
+
+  const element = document.querySelectorAll('.color')
+  
+  for (let index = 0; index < element.length; index += 1)
+  {
+
+    element[index].className = 'color'
+  }
+
+  origin.target.className = 'color selected'
+}
 // CALL FUNCTIONS
 
 allFourColors()
@@ -88,12 +101,23 @@ footerConfig()
 // EVENT LISTENERS
 
 const pixel = document.querySelectorAll('.pixel')
+const pallet = document.querySelectorAll('.color')
+
+window.onload = pallet[0].className = 'color selected'
 
   for (let index = 0; index < pixel.length; index += 1)
   {
 
     pixel[index].addEventListener('mouseover', shadeInPixel)
     pixel[index].addEventListener('mouseout', shadeOutPixel)
+  }
+
+  for (let index = 0; index < pallet.length; index += 1)
+  {
+
+    pallet[index].addEventListener('mouseover', shadeInPixel)
+    pallet[index].addEventListener('mouseout', shadeOutPixel)
+    pallet[index].addEventListener('click', selectedColor)
   }
 
 
