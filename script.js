@@ -4,7 +4,7 @@ function footerConfig()
   
   const element = document.querySelector('footer')
 
-  element.innerHTML = 'Developed by Tiago Braga Costa <p> Total de Visitas: </p>'
+  element.innerHTML = 'Developed by Tiago Braga Costa - 22, Abril de 2022<p> Total de Visitas: </p>'
 }
 
 function allFourColors()
@@ -58,13 +58,37 @@ function createPixel()
   }
 
   verifyPixelBoard()
-
 }
 
+function shadeInPixel(origin)
+{
 
+  origin.target.style.boxShadow = 'inset 0px 0px 10px black' 
+}
+
+function shadeOutPixel(origin)
+{
+
+  origin.target.style.boxShadow = 'inset 0px 0px 0px black' 
+}
 
 // CALL FUNCTIONS
+
 allFourColors()
 createPixel()
 footerConfig()
-// //////////////
+
+// EVENT LISTENERS
+
+const pixel = document.querySelectorAll('.pixel')
+
+  for (let index = 0; index < pixel.length; index += 1)
+  {
+
+    pixel[index].addEventListener('mouseover', shadeInPixel)
+    pixel[index].addEventListener('mouseout', shadeOutPixel)
+  }
+
+  
+
+
