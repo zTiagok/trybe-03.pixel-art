@@ -9,7 +9,7 @@ function footerConfig()
   
   const element = document.querySelector('footer')
 
-  element.innerHTML = 'Developed by Tiago Braga Costa - 22, Abril de 2022<p> Total de Visitas: </p>'
+  element.innerHTML = 'Developed by Tiago Braga Costa<p> 22, Abril de 2022 </p>'
 }
 
 function allFourColors()

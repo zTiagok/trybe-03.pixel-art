@@ -10,16 +10,15 @@ footer
 {
 
     position: relative;
-    top: 52px;
-    left: -100px;
-    width: 140.1%;
+    top: 51px;
+    left: -100.1px;
+    width: 700.1px;
     padding-top: 16px;
     height: 40px;
     text-align: center;
-    line-height: 2px;
+    line-height: 10px;
     background-color: rgb(55, 47, 59);
-    color: white; 
-    
+    color: white;    
 }
 
 .main
@@ -27,7 +26,6 @@ footer
 
     margin:auto;
     width: 500px;
-
     background-color: rgb(94, 85, 105);
     padding-left: 100px;
     padding-right: 100px;
@@ -76,10 +74,8 @@ footer
 
     position: relative;
     height: 210px;
-    left: 29%;
     border: 2px solid black;
-    margin: -1px;
-    display: block;
+    margin: auto;
 }
 
 .pixel
