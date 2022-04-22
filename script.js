@@ -1,3 +1,8 @@
+
+
+// FAZER EVENT LISTENER PARA SELECIONAR A COR QUE DESEJA
+
+
 function footerConfig()
 {
   // CONFIGURAÇÕES DO FOOTER
@@ -18,6 +23,8 @@ function allFourColors()
   color[1].style.backgroundColor = "blue"
   color[2].style.backgroundColor = "green"
   color[3].style.backgroundColor = "orange"
+
+
 
 }
 
@@ -89,6 +96,5 @@ const pixel = document.querySelectorAll('.pixel')
     pixel[index].addEventListener('mouseout', shadeOutPixel)
   }
 
-  
 
 
