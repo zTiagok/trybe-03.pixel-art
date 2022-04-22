@@ -1,4 +1,4 @@
-
+document.querySelector('#board-size').value = 5
 
 // FAZER EVENT LISTENER PARA SELECIONAR A COR QUE DESEJA
 
@@ -20,9 +20,20 @@ function allFourColors()
   const color = document.getElementsByClassName('color')
 
   color[0].style.backgroundColor = "black"
-  color[1].style.backgroundColor = "blue"
-  color[2].style.backgroundColor = "green"
-  color[3].style.backgroundColor = "orange"
+
+  for (let index = 1; index < color.length; index += 1)
+  {
+    let randColor1 = Math.round(Math.random()*225)
+    let randColor2 = Math.round(Math.random()*225)
+    let randColor3 = Math.round(Math.random()*225)
+
+    color[index].style.backgroundColor = "rgba("+randColor1+", "+randColor2+', '+randColor3+")"
+
+  }
+  // color[1].style.backgroundColor = "rgba("+randColor1+", "+randColor2+', '+randColor3+")"
+  // color[2].style.backgroundColor = "rgba("+randColor1+", "+randColor2+', '+randColor3+")"
+  // color[3].style.backgroundColor = "rgba("+randColor1+", "+randColor2+', '+randColor3+")"
+
 
 
 
@@ -34,7 +45,7 @@ function verifyPixelBoard()
 
   const element = document.querySelector('#pixel-board')
   const child = element.children
-
+  const input = document.querySelector('#board-size')
 
   for (let index = 0; index < child.length; index += 1)
   {
@@ -45,6 +56,29 @@ function verifyPixelBoard()
       child[index].className = "pixel"
     }
   } 
+
+  if (input.value >= 5 && input.value <= 50)
+  {
+
+    let size = parseInt(input.value) * 42
+    element.style.width = size+'px'
+    element.style.height = size+'px'
+  }
+  else if (input.value < 5)
+  {
+
+    element.style.width = (5 * 42)+'px'
+    element.style.height = (5 * 42)+'px'
+  }
+  else if (input.value > 50)
+  {
+
+    element.style.width = (50 * 42)+'px'
+    element.style.height = (50 * 42)+'px'    
+  }
+
+  
+  // console.log(parseInt(input.value));
 }
 
 
@@ -118,22 +152,42 @@ function clearPixel(origin)
 
 }
 
-
 function generateNewBoard(origin)
 {
 
   const element = document.querySelector('#board-size')
+  const element2 = document.querySelector('#pixel-board')
+  const child = document.querySelectorAll('.pixel')
 
-    if (element.value < 1 || element.value > 50)
+    if (element.value < 1)
     {
 
-      alert('Board inválida!')
+      alert('Board inválido!')
       element.value = ""
     }
     else
     {
 
-      createPixel(element.value)
+      for (let index = 0; index < child.length; index += 1)
+        {
+          
+        element2.removeChild(child[index])
+        }
+      if (element.value >= 5 && element.value <= 50)
+      {
+
+        createPixel(element.value * element.value)
+      }
+      else if (element.value < 5)
+      {
+
+        createPixel(5 * 5)
+      }
+      else if (element.value > 50)
+      {
+
+        createPixel(50 * 50)
+      }
       
     }
 
@@ -155,8 +209,6 @@ const button = document.querySelector('#generate-board')
 
 window.onload = pallet[0].className = 'color selected'
 window.onload = addEventPallet(), addEventPixel()
-
-
 
 function addEventPixel()
 {
@@ -188,3 +240,4 @@ clear.addEventListener('click', clearPixel)
 button.addEventListener('click', generateNewBoard)
 
 
+document.querySelector('#board-size').value = clear

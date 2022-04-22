@@ -10,7 +10,7 @@ footer
 {
 
     position: relative;
-    top: 75px;
+    top: 52px;
     left: -100px;
     width: 140.1%;
     padding-top: 16px;
@@ -27,7 +27,7 @@ footer
 
     margin:auto;
     width: 500px;
-    height: 500px;
+
     background-color: rgb(94, 85, 105);
     padding-left: 100px;
     padding-right: 100px;
@@ -75,11 +75,11 @@ footer
 {
 
     position: relative;
-    width: 42%;
     height: 210px;
     left: 29%;
     border: 2px solid black;
     margin: -1px;
+    display: block;
 }
 
 .pixel
