@@ -1,27 +1,24 @@
+function footerConfig()
+{
+  // CONFIGURAÇÕES DO FOOTER
+  
+  const element = document.querySelector('footer')
+
+  element.innerHTML = 'Developed by Tiago Braga Costa <p> Total de Visitas: </p>'
+}
+
 function allFourColors()
 {
 
+  // INSERE AS CORES UTILIZÁVEIS
+
   const color = document.getElementsByClassName('color')
-  const backgroundColor = [color[0], color[1], color[2], color[3]]
 
-  backgroundColor[0].style.backgroundColor = "black"
-  backgroundColor[1].style.backgroundColor = "blue"
-  backgroundColor[2].style.backgroundColor = "green"
-  backgroundColor[3].style.backgroundColor = "orange"
+  color[0].style.backgroundColor = "black"
+  color[1].style.backgroundColor = "blue"
+  color[2].style.backgroundColor = "green"
+  color[3].style.backgroundColor = "orange"
 
-  //   for (let index = 0; index < backgroundColor.length; index += 1)
-//   {
-    
-//     if (backgroundColor[index].style.backgroundColor === backgroundColor[index].style.backgroundColor)
-//     {
-
-//       backgroundColor[0].style.backgroundColor = "black"
-//       backgroundColor[1].style.backgroundColor = "blue"
-//       backgroundColor[2].style.backgroundColor = "green"
-//       backgroundColor[3].style.backgroundColor = "orange"
-//     }
-//   }
-//
 }
 
 function verifyPixelBoard()
@@ -40,10 +37,7 @@ function verifyPixelBoard()
 
       child[index].className = "pixel"
     }
-  }
-
-  
-
+  } 
 }
 
 
@@ -60,16 +54,17 @@ function createPixel()
     const tag = document.createElement('div')
     element.appendChild(tag)
     tag.style.backgroundColor = 'white'
-    
+
   }
 
   verifyPixelBoard()
-}
 
+}
 
 
 
 // CALL FUNCTIONS
 allFourColors()
 createPixel()
+footerConfig()
 // //////////////

@@ -1,11 +1,57 @@
-#color-palette 
+body
+{
+
+    margin: 0px;
+    background-color: rgb(24, 17, 34);
+
+}
+
+footer
+{
+
+    position: relative;
+    top: 75px;
+    left: -102px;
+    width: 140%;
+    padding-top: 16px;
+    height: 40px;
+    border: 2px solid red;
+    text-align: center;
+    line-height: 2px;
+    background-color: rgb(55, 47, 59);
+    color: white; 
+}
+
+.main
 {
 
     border: 2px solid red;
+    margin:auto;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(94, 85, 105);
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#title
+{
+
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+#color-palette 
+{
+
     width: 200px;
     height: 50px;
-    padding-left: 20px;
+    padding-left: 160px;
     display: inline-block;
+    position: relative;
+    margin-bottom: 30px;
 }
 
 .color
@@ -22,10 +68,10 @@
 #pixel-board
 {
 
-    width: fit-content;
-    height: fit-content
-    ;
-    border: 1px solid green;
+    position: relative;
+    width: 42%;
+    height: 210px;
+    left: 29%;
 }
 
 .pixel
@@ -34,4 +80,7 @@
     width: 40px;
     height: 40px;
     border: 1px solid black;
+    display:inline-block;
+    margin-bottom: -4px;
+    padding-bottom: 0px;
 }
