@@ -48,14 +48,14 @@ function verifyPixelBoard()
 }
 
 
-function createPixel()
+function createPixel(quantity)
 {
   // CRIA 25 ELEMENTOS COM CLASSNAME DE "PIXEL"
 
 
   const element = document.getElementById('pixel-board')
 
-  for (let index = 0; index < 25; index += 1)
+  for (let index = 0; index < quantity; index += 1)
   {
 
     const tag = document.createElement('div')
@@ -67,17 +67,20 @@ function createPixel()
   verifyPixelBoard()
 }
 
+
 function shadeInPixel(origin)
 {
 
   origin.target.style.boxShadow = 'inset 0px 0px 10px black' 
 }
 
+
 function shadeOutPixel(origin)
 {
 
-  origin.target.style.boxShadow = 'inset 0px 0px 0px black' 
+    origin.target.style.boxShadow = 'inset 0px 0px 0px black' 
 }
+
 
 function selectedColor(origin)
 {
@@ -92,26 +95,86 @@ function selectedColor(origin)
 
   origin.target.className = 'color selected'
 }
+
+
+function paintPixel(origin)
+{
+
+  const element = document.querySelector('.selected')
+  origin.target.style.backgroundColor = element.style.backgroundColor
+}
+
+
+function clearPixel(origin)
+{
+
+  const pixel = document.querySelectorAll('.pixel')
+
+  for (let index = 0; index < pixel.length; index += 1)
+  {
+
+    pixel[index].style.backgroundColor = 'white'
+  }
+
+}
+
+
+function generateNewBoard(origin)
+{
+
+  const element = document.querySelector('#board-size')
+
+    if (element.value < 1 || element.value > 50)
+    {
+
+      alert('Board inválida!')
+      element.value = ""
+    }
+    else
+    {
+
+      createPixel(element.value)
+      
+    }
+
+    verifyPixelBoard()
+    addEventPixel()
+}
+
 // CALL FUNCTIONS
 
 allFourColors()
-createPixel()
+createPixel(25)
 footerConfig()
 
-// EVENT LISTENERS
 
-const pixel = document.querySelectorAll('.pixel')
+// EVENT LISTENERS
 const pallet = document.querySelectorAll('.color')
+const clear = document.querySelector('#clear-board')
+const button = document.querySelector('#generate-board')
 
 window.onload = pallet[0].className = 'color selected'
+window.onload = addEventPallet(), addEventPixel()
+
+
+
+function addEventPixel()
+{
+
+  const pixel = document.querySelectorAll('.pixel')
 
   for (let index = 0; index < pixel.length; index += 1)
   {
 
     pixel[index].addEventListener('mouseover', shadeInPixel)
     pixel[index].addEventListener('mouseout', shadeOutPixel)
-  }
+    pixel[index].addEventListener('click', paintPixel)
 
+  }
+}
+
+function addEventPallet()
+{
   for (let index = 0; index < pallet.length; index += 1)
   {
 
@@ -119,6 +182,9 @@ window.onload = pallet[0].className = 'color selected'
     pallet[index].addEventListener('mouseout', shadeOutPixel)
     pallet[index].addEventListener('click', selectedColor)
   }
+}
 
+clear.addEventListener('click', clearPixel)
+button.addEventListener('click', generateNewBoard)
 
 

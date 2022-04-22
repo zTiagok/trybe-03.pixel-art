@@ -12,13 +12,14 @@ footer
     position: relative;
     top: 75px;
     left: -100px;
-    width: 140%;
+    width: 140.1%;
     padding-top: 16px;
     height: 40px;
     text-align: center;
     line-height: 2px;
     background-color: rgb(55, 47, 59);
     color: white; 
+    
 }
 
 .main
@@ -31,8 +32,12 @@ footer
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 10px;
+    padding-bottom: 51px;
     margin-top: 3%;
     box-shadow: 0px 3px 10px black;
+    user-select: none; /* DESABILITA TODO CLICK FORA DO JS NO SITE*/
+    border: 5px solid rgb(30, 27, 34);
+    
 }
 
 #title
@@ -52,7 +57,7 @@ footer
     padding-left: 160px;
     display: inline-block;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .color
@@ -73,6 +78,8 @@ footer
     width: 42%;
     height: 210px;
     left: 29%;
+    border: 2px solid black;
+    margin: -1px;
 }
 
 .pixel
@@ -84,4 +91,44 @@ footer
     display:inline-block;
     margin-bottom: -4px;
     padding-bottom: 0px;
+}
+
+#clear-board
+{
+
+    width: fit-content;
+    height: 15px;
+    font-size: 10px;
+    position: relative;
+    left: -138px;
+    top: 35px;
+    box-shadow: 0px 2px 5px black;
+}
+
+#board-size
+{
+
+    width: 85px;
+    height: 12px;
+    font-size: 10px;
+    box-shadow: 0px 2px 5px black;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+#manual-input
+{
+
+    width: fit-content;
+    left: 184px;
+    top: -15px;
+    position: relative;
+}
+
+#generate-board
+{
+
+    font-size: 10px;
+    position: relative;
+    box-shadow: 0px 2px 5px black;
 }
