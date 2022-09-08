@@ -37,7 +37,7 @@
 - [X] 3. Add black as the first color in the color palette.
 - [X] 4. Add a pixel frame, with 25 pixels, to the page.
 - [X] 5. Make each pixel frame element 40 pixels wide, 40 pixels high and bounded by a 1 pixel black border.
-- [X] 6. Set the initial color to black. When you load the page the black color should already be selected to paint the pixels
+- [X] 6. Set the initial color to black. When you load the page the black color should already be selected to paint the pixels.
 - [X] 7. Clicking on one of the colors in the palette causes it to be selected and used to fill the pixels in the frame.
 - [X] 8. Clicking on a pixel within the frame after selecting a color from the palette causes the pixel to be filled with the selected color.
 - [X] 9. Create a button that, when clicked, clears the board by filling the color of all its pixels with white.
