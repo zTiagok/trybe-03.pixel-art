@@ -21,9 +21,9 @@
     ℹ️ Information ℹ️
   </h3>
   <br>
-  <span> - </span> 
+  <span> A project with the goal of creating an application for making pixel art.  </span> 
   <br><br>
-  <span> - </span>
+  <span> By manipulating the DOM of the page we were able to add more squares and then paint them with the selected color. </span>
   <br>
   <hr>
   <h3>
