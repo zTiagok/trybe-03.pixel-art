@@ -32,7 +32,7 @@
   <div align="left">
   <br>
   
-- [X] 1. Add the title "Color Palette" to the page.
+- [X] 1. Add the title `Color Palette` to the page.
 - [X] 2. Add a palette of four distinct colors to the page.
 - [X] 3. Add black as the first color in the color palette.
 - [X] 4. Add a pixel frame, with 25 pixels, to the page.
@@ -48,10 +48,11 @@
   <br>
   <hr>
   <h3>
-    📄 Pages and Components 📄
+    📄 Features 📄
   </h3>
   <br>
-  <span> Basic HTML, Javascript and CSS
+  <span> ◐  ◑ </span>
+  <br><br>
   <br>
   <hr>
   <h3>
