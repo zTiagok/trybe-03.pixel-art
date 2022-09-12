@@ -51,7 +51,13 @@
     📄 Features 📄
   </h3>
   <br>
-  <span> ◐  ◑ </span>
+  <span> ◐ Paint with the selected color by clicking on the white square. ◑ </span>
+  <br><br>
+  <span> ◐ Select and paint with random colors generated whenever the page is rendered. ◑ </span>
+  <br><br>
+  <span> ◐ Increase the size of the grid by using the input and clicking on the button. ◑ </span>
+  <br><br>
+  <span> ◐ Clear the grid by clicking on the "Limpar" button. ◑ </span>
   <br><br>
   <br>
   <hr>
